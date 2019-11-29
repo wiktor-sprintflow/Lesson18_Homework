@@ -9,7 +9,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class Euler6Test {
-    private int number;
     private Euler6 systemUnderTest;
 
     @BeforeEach
@@ -17,14 +16,16 @@ public class Euler6Test {
         systemUnderTest = new Euler6();
     }
 
-
     @Test
     void whenTen_thenReturn2640() {
-        //Given
-        number = 10;
-        //When
+
+        //given
+        int number = 10;
+
+        //when
         int result = systemUnderTest.difference(number);
-        //Then
+
+        //then
         assertEquals(2640, result); //JUnit 5
         assertThat(result,is(equalTo(2640))); //Hamcrest
         assertThat(result).isEqualTo(2640); //AssertJ
@@ -32,11 +33,14 @@ public class Euler6Test {
 
     @Test
     void whenMinusOne_thenReturnZero() {
-        //Given
-        number = -1;
-        //When
+
+        //given
+        int number = -1;
+
+        //when
         int result = systemUnderTest.difference(number);
-        //Then
+
+        //then
         assertEquals(0, result); //JUnit 5
         assertThat(result,is(equalTo(0))); //Hamcrest
         assertThat(result).isEqualTo(0); //AssertJ
@@ -44,11 +48,14 @@ public class Euler6Test {
 
     @Test
     void whenZero_thenReturnZero() {
-        //Given
-        number = 0;
-        //When
+
+        //given
+        int number = 0;
+
+        //when
         int result = systemUnderTest.difference(number);
-        //Then
+
+        //then
         assertEquals(0, result); //JUnit 5
         assertThat(result,is(equalTo(0))); //Hamcrest
         assertThat(result).isEqualTo(0); //AssertJ
@@ -56,11 +63,14 @@ public class Euler6Test {
 
     @Test
     void whenOne_thenReturnZero() {
-        //Given
-        number = 1;
-        //When
+
+        //given
+        int number = 1;
+
+        //when
         int result = systemUnderTest.difference(number);
-        //Then
+
+        //then
         assertEquals(0, result); //JUnit 5
         assertThat(result,is(equalTo(0))); //Hamcrest
         assertThat(result).isEqualTo(0); //AssertJ
@@ -68,15 +78,16 @@ public class Euler6Test {
 
     @Test
     void whenTwo_thenReturnFour() {
-        //Given
-        number = 2;
-        //When
+
+        //given
+        int number = 2;
+
+        //when
         int result = systemUnderTest.difference(number);
-        //Then
+
+        //then
         assertEquals(4, result); //JUnit 5
         assertThat(result,is(equalTo(4))); //Hamcrest
         assertThat(result).isEqualTo(4); //AssertJ
     }
-
 }
-

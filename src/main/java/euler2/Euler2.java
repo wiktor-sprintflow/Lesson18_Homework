@@ -6,8 +6,8 @@ public class Euler2 {
         int sum = 0;
         int previous = 1;
         int next = 2;
-        int tmp;
         while (previous <= upperRange) {
+            int tmp;
             if (previous % 2 == 0) {
                 sum += previous;
             }

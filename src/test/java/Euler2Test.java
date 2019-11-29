@@ -9,8 +9,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class Euler2Test {
-    private int number;
-    private int number2;
     private Euler2 systemUnderTest;
 
     @BeforeEach
@@ -18,14 +16,16 @@ public class Euler2Test {
         systemUnderTest = new Euler2();
     }
 
-
     @Test
     void whenEightyNine_thenReturnFortyFour() {
-        //Given
-        number = 89;
-        //When
+
+        //given
+        int number = 89;
+
+        //when
         int result = systemUnderTest.sumFibonacciEvenNumbers(number);
-        //Then
+
+        //then
         assertEquals(44, result); //JUnit 5
         assertThat(result,is(equalTo(44))); //Hamcrest
         assertThat(result).isEqualTo(44); //AssertJ
@@ -33,37 +33,59 @@ public class Euler2Test {
 
     @Test
     void whenFiveHundred_thenThreeHundredSeventySix() {
-        //Given
-        number = 500;
-        //When
+
+        //given
+        int number = 500;
+
+        //when
         int result = systemUnderTest.sumFibonacciEvenNumbers(number);
-        //Then
+
+        //then
         assertEquals(188, result); //JUnit 5
         assertThat(result,is(equalTo(188))); //Hamcrest
         assertThat(result).isEqualTo(188); //AssertJ
     }
 
     @Test
-    void whenEightMillions_thenSameAsFourMillions() {
-        //Given
-        number = 4000000;
-        number2 = 8000000;
-        //When
+    void whenFourMillions_thenFourMillionPlus() {
+
+        //given
+        int number = 4613732;
+
+        //when
         int result = systemUnderTest.sumFibonacciEvenNumbers(number);
-        int result2 = systemUnderTest.sumFibonacciEvenNumbers(number2);
-        //Then
-        assertEquals(result2, result); //JUnit 5
-        assertThat(result,is(equalTo(result2))); //Hamcrest
-        assertThat(result).isEqualTo(result2); //AssertJ
+
+        //then
+        assertEquals(4613732, result); //JUnit 5
+        assertThat(result,is(equalTo(4613732))); //Hamcrest
+        assertThat(result).isEqualTo(4613732); //AssertJ
+    }
+
+    @Test
+    void whenEightMillions_thenAlsoFourMillionPlus() {
+
+        //given
+        int number = 8000000;
+
+        //when
+        int result = systemUnderTest.sumFibonacciEvenNumbers(number);
+
+        //then
+        assertEquals(4613732, result); //JUnit 5
+        assertThat(result,is(equalTo(4613732))); //Hamcrest
+        assertThat(result).isEqualTo(4613732); //AssertJ
     }
 
     @Test
     void whenMinusOne_thenZero() {
-        //Given
-        number = -1;
-        //When
+
+        //given
+        int number = -1;
+
+        //when
         int result = systemUnderTest.sumFibonacciEvenNumbers(number);
-        //Then
+
+        //then
         assertEquals(0, result); //JUnit 5
         assertThat(result,is(equalTo(0))); //Hamcrest
         assertThat(result).isEqualTo(0); //AssertJ
@@ -71,11 +93,14 @@ public class Euler2Test {
 
     @Test
     void whenZero_thenZero() {
-        //Given
-        number = -1;
-        //When
+
+        //given
+        int number = 0;
+
+        //when
         int result = systemUnderTest.sumFibonacciEvenNumbers(number);
-        //Then
+
+        //then
         assertEquals(0, result); //JUnit 5
         assertThat(result,is(equalTo(0))); //Hamcrest
         assertThat(result).isEqualTo(0); //AssertJ
@@ -83,25 +108,30 @@ public class Euler2Test {
 
     @Test
     void whenOne_thenZero() {
-        //Given
-        number = -1;
-        //When
+
+        //given
+        int number = 1;
+
+        //when
         int result = systemUnderTest.sumFibonacciEvenNumbers(number);
-        //Then
+
+        //then
         assertEquals(0, result); //JUnit 5
         assertThat(result,is(equalTo(0))); //Hamcrest
         assertThat(result).isEqualTo(0); //AssertJ
     }
     @Test
     void whenTwo_thenTwo() {
-        //Given
-        number = -1;
-        //When
+
+        //given
+        int number = 2;
+
+        //when
         int result = systemUnderTest.sumFibonacciEvenNumbers(number);
-        //Then
-        assertEquals(0, result); //JUnit 5
-        assertThat(result,is(equalTo(0))); //Hamcrest
-        assertThat(result).isEqualTo(0); //AssertJ
+
+        //then
+        assertEquals(2, result); //JUnit 5
+        assertThat(result,is(equalTo(2))); //Hamcrest
+        assertThat(result).isEqualTo(2); //AssertJ
     }
 }
-
