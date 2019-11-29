@@ -22,7 +22,7 @@
                     <archive>
                         <manifest>
                             <!-- Jar file entry point -->
-                            <mainClass>euler2/Euler2App</mainClass>
+                            <mainClass>EulerApp</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
